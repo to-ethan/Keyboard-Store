@@ -12,12 +12,21 @@ public class Receipt {
 	int productQuantity;
 	
 	public Receipt(Product product) {
-		this.id = new Long(1);
+		// Replace with transaction id when receipts are stored in database.
+		this.id = new Long(267);
 		this.productName = product.getName();
 		this.productPrice = product.getPrice();
 		this.productQuantity = 1;
 	}
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getProductName() {
 		return productName;
 	}

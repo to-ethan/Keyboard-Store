@@ -21,10 +21,6 @@ public class FulfillmentRestController {
 	@GetMapping(value = "/products/{id}")
 	public Receipt getReceiptForPurchase(@PathVariable("id") Long id) {
 		Product product = productClient.getProduct(id);
-		System.out.println(product.getId());
-		System.out.println(product.getName());
-		System.out.println(product.getDescription());
-		System.out.println(product.getPrice());
 		return new Receipt(product);
 	}
 }

@@ -6,6 +6,7 @@
       <th scope="col">Name</th>
       <th scope="col">Description</th>
       <th scope="col">Price</th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
@@ -14,6 +15,8 @@
       <td>{{ product.name }}</td>
       <td>{{ product.description }}</td>
       <td>${{ product.price }}</td>
+      <a routerLink="/purchase/{{product.id}}" class="btn btn-info">Purchase</a>
+
     </tr>
     </tbody>
   </table>

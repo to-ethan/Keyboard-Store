@@ -1,0 +1,26 @@
+<div class="card my-5">
+  <br/>
+  <h1 align="center">Thank you for your order!</h1>
+  <br/>
+  <h5>Your order has been received and is now being processed. Your order details are shown below for your reference:</h5>
+  <h4> Order: #{{ receipt.id }}</h4>
+  <br/>
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+      <td>{{ receipt.productName }}</td>
+      <td>{{ receipt.productQuantity }}</td>
+      <td>${{ receipt.productPrice }}</td>
+    </tbody>
+  </table>
+  <br/>
+  <p> Thank you for shopping with us, </p>
+  <h5> The Keyboard Store</h5>
+  <br/>
+</div>
