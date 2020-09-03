@@ -8,6 +8,8 @@ An online keyboard store implemented with an Angular and Bootstrap frontend and 
 ## Upcoming Features
 - Saving transactions to database.
 - Ability to use a shopping cart and buy multiple keyboards.
+- Ability to apply coupons in cart before check out.
+- Fix product listing price format.
 
 ## Frameworks & Tools
 - Spring Boot, Spring MVC, Spring Cloud
