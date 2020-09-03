@@ -2,9 +2,11 @@ package com.ethan.keyboardstore.controllers;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +32,11 @@ public class ProductRestController {
 	public List<Product> findAll() {
 		// TODO: Load increments of the repo using Pageable.
 		return productRepo.findAll();
+	}
+	
+	@GetMapping(value = "/products/{id}")
+	public Optional<Product> find(@PathVariable("id") Long id) {
+		return productRepo.findById(id);
 	}
 
 	@HystrixCommand(fallbackMethod = "sendErrorResponse")
